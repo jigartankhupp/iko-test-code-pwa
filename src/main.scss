@@ -1,0 +1,107 @@
+/*
+ * Entry point of global application style.
+ * Component-specific style should not go here and be included directly as part of the components.
+ */
+
+// Theme variables, must be included before the libraries to allow overriding defaults
+@import "theme/theme-variables";
+
+// 3rd party libraries
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+// Theme customization
+@import "theme/theme";
+
+.fa {
+  &:before {
+    font-family: fontawesome;
+  }
+}
+
+.cabarete_two_slider {
+  .carousel {
+    margin: 0 -10px;
+  }
+}
+
+.star_rating {
+  input {
+    &.star-5 {
+      &:checked {
+        ~ label {
+          &.star:before {
+            color: #fe7;
+            text-shadow: none !important;
+          }
+        }
+      }
+    }
+  }
+  label {
+    &.star {
+      padding: 2px !important;
+      font-size: 16px !important;
+      color: #444;
+      transition: 0.2s;
+    }
+  }
+}
+
+.cabarete_two_slider,
+.cabarete_one_slider,
+.related_slider {
+  .slick-prev {
+    left: 10px !important;
+    z-index: 9;
+    width: auto !important;
+    height: auto !important;
+    &:before {
+      content: "\f104" !important;
+      font-family: fontawesome !important;
+      font-size: 36px;
+    }
+  }
+  .slick-next {
+    right: 10px !important;
+    z-index: 9;
+    width: auto !important;
+    height: auto !important;
+    &:before {
+      content: "\f105" !important;
+      font-family: fontawesome !important;
+      font-size: 36px;
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px !important;
+    opacity: 1 !important;
+  }
+}
+.cabarete_two_slider {
+  .slick-prev {
+    left: 15px !important;
+    z-index: 9;
+    bottom: 0;
+    height: 50px !important;
+    line-height: 50px;
+    &:before {
+      color: #000 !important;
+    }
+  }
+  .slick-next {
+    right: 15px !important;
+    z-index: 9 !important;
+    bottom: 0;
+    height: 50px !important;
+    line-height: 50px;
+    &:before {
+      color: #000 !important;
+    }
+  }
+}

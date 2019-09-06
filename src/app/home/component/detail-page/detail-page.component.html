@@ -1,0 +1,140 @@
+<app-header [isBack]="true" [title]="'Spot Detail'"> </app-header>
+<div class="content_body main_details">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="details_banner">
+          <img [src]="spot.image" />
+          <ul>
+            <li>
+              <i class="fa fa-share-alt" aria-hidden="true"></i><span>{{ spot.share }}</span>
+            </li>
+            <li>
+              <i class="fa fa-heart-o" aria-hidden="true"></i><span>{{ spot.like }}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="details_content">
+          <h1>{{ spot.title }}</h1>
+          <span>{{ spot.subTitle }}</span>
+          <ul class="listing">
+            <li>
+              <i class="fa fa-random" aria-hidden="true"></i><span>{{ spot.wind }} knots</span>
+            </li>
+            <li>
+              <i class="fa fa-home" aria-hidden="true"></i><span>{{ spot.homes }} Centers</span>
+            </li>
+            <li>
+              <i class="fa fa-users" aria-hidden="true"></i><span>{{ spot.people }} Centers</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i class="fa fa-compress" aria-hidden="true"></i>
+              <div class="details_listing">
+                <span *ngFor="let item of spot.suitable">{{ item }},&nbsp;</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <div class="details_listing">
+                Wind:&nbsp;<span *ngFor="let item of spot.windDetail">{{ item }},&nbsp;</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <div class="details_listing">
+                Spot:&nbsp;<span *ngFor="let item of spot.spotDetail">{{ item }},&nbsp;</span>
+              </div>
+            </li>
+          </ul>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book
+          </p>
+          <p>
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- MAP -->
+    <div class="row">
+      <div class="col-md-12">
+        <app-map-component [lat]="spot.lat" [lng]="spot.lng"></app-map-component>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="forecast">
+          <h2>Centers in Cabarete</h2>
+          <div class="main_forecast">
+            <div class="header_forecast">
+              <div class="title">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <h3>Dominican Republic - Cabarete - Kite beach #kite</h3>
+              </div>
+              <div class="temperature">
+                <ul>
+                  <li><i class="fa fa-sun-o" aria-hidden="true"></i><span>29 *c</span></li>
+                  <li><i class="fa fa-arrow-left" aria-hidden="true"></i><span>14 kts</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="progress_border">
+              <i class="fa fa-random" aria-hidden="true"></i>
+              <img src="../assets/images/border_week.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Splider -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cabarete_two_slider">
+          <h2>Centers in Cabarete</h2>
+          <app-center-list [centers]="centers"></app-center-list>
+        </div>
+      </div>
+    </div>
+    <!-- Slider  -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cabarete_one_slider">
+          <h2>Centers in Cabarete</h2>
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
+            <div ngxSlickItem *ngFor="let slide of centers" class="inner_cabarete_one_slider">
+              <img src="{{ slide.image }}" alt="" width="100%" />
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+    <!-- Related Spots Slider -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="related_slider">
+          <h2>Releated Spots</h2>
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
+            <div ngxSlickItem *ngFor="let slide of relatedSpot">
+              <app-spot-item [spot]="slide"></app-spot-item>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="bottom_btn">
+          <button>Book a course in cabarete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

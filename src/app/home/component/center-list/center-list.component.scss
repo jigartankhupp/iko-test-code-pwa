@@ -1,0 +1,53 @@
+.inner_cabarete_two_slider {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 0 10px 5px;
+  outline: none;
+  img {
+    height: 31.401vw;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .slider_content {
+    padding: 15px 10px 20px;
+    @media (max-width: 399px) {
+      padding: 10px 30px 20px;
+    }
+    p {
+      color: var(--Dark-grayish-red);
+      font-size: 13px;
+      line-height: 18px;
+      display: flex;
+      align-items: flex-start;
+      margin: 0;
+      height: 35px;
+      overflow: hidden;
+    }
+    i {
+      margin-right: 5px;
+      margin-top: 4px;
+    }
+    .star_rating {
+      text-align: left;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 70px;
+        display: inline-block;
+      }
+      span {
+        font-size: 12px;
+        margin-left: 5px;
+        color: var(--Dark-grayish-red);
+      }
+    }
+  }
+}
