@@ -14,12 +14,18 @@
     z-index: 999;
     width: 100%;
     top: 0;
+    nav {
+      &.bg-dark {
+        padding: 10px 15px 15px !important;
+      }
+    }
   }
   nav {
     &.bg-dark {
       background-color: var(--primary-color) !important;
       margin-bottom: 0;
       padding: 15px;
+      transition: ease 0.3s;
     }
   }
   .logo {
