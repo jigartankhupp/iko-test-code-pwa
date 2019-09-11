@@ -9,7 +9,7 @@
       </p>
       <div class="star_rating">
         <div>
-        	<ngx-star-rating name="rating" [disabled]="true" [(ngModel)]="slide.rating" [id]="'rating'"></ngx-star-rating>
+        	<ngb-rating [rate]="5" [max]='5' [readonly]="true"></ngb-rating>
         </div>
         <span>({{ slide.reviewed }})</span>
       </div>

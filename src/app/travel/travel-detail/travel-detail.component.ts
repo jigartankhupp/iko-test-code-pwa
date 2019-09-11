@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { spotList, Spot, Centers } from '../../constant';
+import { spotList, Spot, Centers } from '../constant';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-detail-page',
-  templateUrl: './detail-page.component.html',
-  styleUrls: ['./detail-page.component.scss']
+  selector: 'app-travel-detail',
+  templateUrl: './travel-detail.component.html',
+  styleUrls: ['./travel-detail.component.scss']
 })
-export class DetailPageComponent implements OnInit {
+export class TravelDetailComponent implements OnInit {
+
   public relatedSpot: Array<Spot> = [];
   private spotId: number;
   public spot: Spot;
@@ -29,4 +30,5 @@ export class DetailPageComponent implements OnInit {
       this.centers = this.spot.centers;
     }
   }
+
 }

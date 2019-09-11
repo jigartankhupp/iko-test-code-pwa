@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailPageComponent } from './detail-page.component';
+import { TravelComponent } from './travel.component';
 
-describe('DetailPageComponent', () => {
-  let component: DetailPageComponent;
-  let fixture: ComponentFixture<DetailPageComponent>;
+describe('TravelComponent', () => {
+  let component: TravelComponent;
+  let fixture: ComponentFixture<TravelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DetailPageComponent]
-    }).compileComponents();
+      declarations: [ TravelComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailPageComponent);
+    fixture = TestBed.createComponent(TravelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
