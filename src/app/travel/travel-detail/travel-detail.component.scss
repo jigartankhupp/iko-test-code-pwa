@@ -90,22 +90,6 @@
   }
 }
 
-.detials_map {
-  padding: 15px 0;
-  h2 {
-    font-weight: 200;
-    font-size: 26px;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
-  iframe {
-    width: 100%;
-    height: 45.894vw;
-    box-shadow: none;
-    border: none;
-  }
-}
-
 .forecast {
   padding: 15px 0;
   h2 {
@@ -194,7 +178,7 @@
   }
 }
 
-.cabarete_two_slider {
+.detail-card-header{
   padding: 15px 0;
   outline: none;
   h2 {
@@ -202,69 +186,21 @@
     font-size: 26px;
     margin-bottom: 1rem;
     color: var(--primary-color);
-  }
-  .inner_cabarete_two_slider {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    margin: 0 10px 5px;
-    outline: none;
-    border-radius: 0 0 5px 5px;
-    img {
-      height: 31.401vw;
-      object-fit: cover;
-      border-radius: 5px 5px 0 0;
-    }
-    h1 {
-      font-size: 18px;
-      font-weight: 400;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .slider_content {
-      padding: 10px 30px 20px;
-      p {
-        color: var(--Dark-grayish-red);
-        font-size: 13px;
-        line-height: 18px;
-        display: flex;
-        align-items: flex-start;
-        margin: 0;
-        height: 35px;
-        overflow: hidden;
-      }
-      i {
-        margin-right: 5px;
-        margin-top: 4px;
-      }
-      .star_rating {
-        text-align: left;
-        padding: 0 15px;
-        margin-top: 10px;
-        img {
-          width: 100%;
-          height: auto;
-          max-width: 70px;
-          display: inline-block;
-        }
-        span {
-          font-size: 12px;
-          margin-left: 5px;
-          color: var(--Dark-grayish-red);
-        }
-      }
-    }
   }
 }
 
-.cabarete_one_slider {
-  padding: 15px 0;
+.cabarete_two_slider {
+  /*padding: 15px 0;
   outline: none;
   h2 {
     font-weight: 200;
     font-size: 26px;
     margin-bottom: 1rem;
     color: var(--primary-color);
-  }
+  }*/
+}
+
+.cabarete_one_slider {
   .inner_cabarete_one_slider {
     img {
       height: 38.309vw;
@@ -275,100 +211,8 @@
 }
 
 .related_slider {
-  padding: 15px 0;
-  h2 {
-    font-weight: 200;
-    font-size: 26px;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
   .home_blog_section {
     margin: 0;
-  }
-}
-
-.main_releated_blog_section {
-  padding: 15px 0;
-  outline: none;
-  h2 {
-    font-weight: 200;
-    font-size: 26px;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
-  .releated_blog_section {
-    position: relative;
-    outline: none;
-    min-height: 48.309vw;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
-    &:before {
-      content: "";
-      box-shadow: inset 0px -100px 100px -30px var(--primary-color);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 9;
-      border-radius: 10px;
-    }
-    img {
-      width: 100%;
-      height: 48.309vw;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .releated_blog_section_content {
-      position: absolute;
-      z-index: 9;
-      bottom: 0;
-      width: 100%;
-      padding: 0 30px;
-      @media (max-width: 767px) {
-        padding: 0 15px 0 35px;
-      }
-      h1 {
-        color: var(--white-color);
-        font-weight: 200;
-        font-size: 36px;
-        letter-spacing: 1px;
-        line-height: 1;
-        margin: 0 0 5px 0;
-        @media (max-width: 767px) {
-          font-size: 26px;
-        }
-      }
-      span {
-        font-size: 14px;
-        font-weight: 200;
-        color: var(--white-color);
-        letter-spacing: 0.5px;
-      }
-      ul {
-        padding: 0;
-        list-style-type: none;
-        color: var(--white-color);
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        li {
-          padding: 15px 9px;
-          line-height: 1;
-          &:first-child {
-            padding-left: 0;
-          }
-          &:last-child {
-            padding-right: 0;
-          }
-          i {
-            margin-right: 8px;
-            font-size: 14px;
-          }
-        }
-      }
-    }
   }
 }
 

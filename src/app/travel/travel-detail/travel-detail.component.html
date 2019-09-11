@@ -69,7 +69,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <div class="forecast">
+        <div class="forecast detail-card-header">
           <h2>Centers in Cabarete</h2>
           <div class="main_forecast">
             <div class="header_forecast">
@@ -86,7 +86,7 @@
             </div>
             <div class="progress_border">
               <i class="fa fa-random" aria-hidden="true"></i>
-              <img src="../assets/images/border_week.png" />
+              <img src="assets/images/border_week.png" />
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
     <!-- Center Splider -->
     <div class="row">
       <div class="col-md-12">
-        <div class="cabarete_two_slider">
+        <div class="cabarete_two_slider detail-card-header">
           <h2>Centers in Cabarete</h2>
           <app-center-list [centers]="centers"></app-center-list>
         </div>
@@ -105,7 +105,7 @@
     <!-- Slider  -->
     <div class="row">
       <div class="col-md-12">
-        <div class="cabarete_one_slider">
+        <div class="cabarete_one_slider detail-card-header">
           <h2>Centers in Cabarete</h2>
           <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
             <div ngxSlickItem *ngFor="let slide of centers" class="inner_cabarete_one_slider">
@@ -118,7 +118,7 @@
     <!-- Related Spots Slider -->
     <div class="row">
       <div class="col-md-12">
-        <div class="related_slider">
+        <div class="related_slider detail-card-header">
           <h2>Releated Spots</h2>
           <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
             <div ngxSlickItem *ngFor="let slide of relatedSpot">
