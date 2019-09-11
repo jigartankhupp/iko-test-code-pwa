@@ -18,10 +18,15 @@ export class TravelDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+  	// Get spot id
     this.spotId = +this.route.snapshot.paramMap.get('id');
+
     const index = spotList.findIndex(x => {
       return x.id == this.spotId;
     });
+    /**
+     * Get related spot detail & remove current opent spot from list.
+     */
     if (index > -1) {
       this.spot = spotList[index];
       const tmpList = [...spotList];

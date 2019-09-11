@@ -27,30 +27,6 @@
     margin: 0 -10px;
   }
 }
-
-.star_rating {
-  input {
-    &.star-5 {
-      &:checked {
-        ~ label {
-          &.star:before {
-            color: #fe7;
-            text-shadow: none !important;
-          }
-        }
-      }
-    }
-  }
-  label {
-    &.star {
-      padding: 2px !important;
-      font-size: 16px !important;
-      color: #444;
-      transition: 0.2s;
-    }
-  }
-}
-
 .cabarete_two_slider,
 .cabarete_one_slider,
 .related_slider {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Router, Route } from '@angular/router';
+import {Location} from '@angular/common';
 import { AuthenticationService, CredentialsService, I18nService } from '@app/core';
 
 @Component({
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private location: Location,
     private authenticationService: AuthenticationService,
     private credentialsService: CredentialsService,
     private i18nService: I18nService
@@ -35,6 +36,9 @@ export class HeaderComponent implements OnInit {
     this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
   }
 
+  /**
+   * Handle to add class in header
+   */
   @HostListener('window:scroll', ['$event'])
   public windowScrolled($event: Event) {
     if(window.pageYOffset>100){
@@ -58,5 +62,9 @@ export class HeaderComponent implements OnInit {
   }
   get class():string{
     return this.className;
+  }
+
+  goBack(){
+    this.location.back();
   }
 }
