@@ -63,7 +63,9 @@ export class HeaderComponent implements OnInit {
   get class():string{
     return this.className;
   }
-
+  /**
+   * Go to Prev page.
+   */
   goBack(){
     this.location.back();
   }
